@@ -14,4 +14,4 @@ message:
     report: "{player_reported} was reported by {player} for {reason}"
   server:
     permission-denied: "You don't have this permission"
-    args-helper: ""
+    args-helper: "&cusage > /report pseudo reason"

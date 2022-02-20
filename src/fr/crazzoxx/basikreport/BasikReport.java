@@ -23,7 +23,7 @@ public class BasikReport extends JavaPlugin {
     }
 
     public String getConfStr(String confPath){
-        return this.getConfig().getString(confPath).replace("&","§");
+        return this.getConfig().getString(confPath).replace("{prefix}",getConfig().getString("plugin.prefix")).replace("&","§");
     }
 
 }

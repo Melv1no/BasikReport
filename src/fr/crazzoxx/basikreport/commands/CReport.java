@@ -45,9 +45,9 @@ public class CReport implements CommandExecutor {
         if(args.length > 2){
             Player target = Bukkit.getPlayer(args[0]);
             boolean targetConnected = false;
-            String reason = "";
+            StringBuilder reason = new StringBuilder();
             for(int i = 1; i < args.length;i++){
-                reason = reason + args[i] + " ";
+                reason.append(i);
             }
             for(Player player : instance.getServer().getOnlinePlayers()){
                 if(player.equals(target)){
@@ -56,7 +56,7 @@ public class CReport implements CommandExecutor {
                 }
             }
             if(!targetConnected) {
-                sender.sendMessage(instance.getConfStr("message.player.report-failed").replace("{player}", target.getDisplayName()));
+                sender.sendMessage(instance.getConfStr("message.player.report-failed").replace("{player}", args[0]));
                 return false;
             }
             sender.sendMessage(instance.getConfStr("message.player.report-confirmed").replace("{player}", target.getDisplayName()));
