@@ -1,0 +1,17 @@
+plugin:
+  enable: true
+  prefix: ""
+gui:
+  title: "§c GUI BasikReport"
+  items-lores:
+    - "reported {report_count} time"
+    - "§c player {online_offline}"
+message:
+  player:
+    report-confirmed: "{player} is report"
+    report-failed: "failed to report {player}"
+  staff:
+    report: "{player_reported} was reported by {player} for {reason}"
+  server:
+    permission-denied: "You don't have this permission"
+    args-helper: ""

@@ -1,0 +1,6 @@
+name: BasikReport
+author: Crazzoxx
+version: 1.0
+main: fr.crazzoxx.basikreport.BasikReport
+commands:
+  report:
