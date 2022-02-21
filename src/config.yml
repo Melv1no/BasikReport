@@ -4,20 +4,25 @@ plugin:
   usage: "Utilisation: /report pseudo raison"
   no-console: "&cLa console ne peut pas utiliser cette commande !"
   permission-denied: "&cVous n'avez pas la permission d'utiliser cette commande !"
+  disabled-feature: "&cCette fonctionnalité est désactiver !"
 gui:
+  enable: true
   title: "§c&lBasikReport"
   items-lores:
     - "Singaler {report_count} fois."
     -  ""
     - "&aCliquer droit pour ce téléporter"
     - "status: {connect_status}" #Is online in green or offline in red
+  report-gui-teleport: "&cRester discret vous avez été téléporter à un joueur signaler !"
+list:
+  enable: true
+  report-list-row: "&c⇒ {player} a été signaler {report_counter} fois."
+  report-list-empty: "&aAucun joueur n'as été signaler !"
 message:
   player:
     report-confirmed: "{prefix} &aLe joueur {player} a été signaler !"
     report-failed: "{prefix} &cLe joueur {player} est introuvable !"
   staff:
     report: "&c{player_reported} &fa été signaler par &c{player} &ffor &a{reason}"
-    report-list-row: "&c⇒ {player} a été signaler {report_counter} fois."
-    report-list-empty: "&aAucun joueur n'as été signaler !"
-    report-gui-teleport: "&cRester discret vous avez été téléporter à un joueur signaler !"
+
 

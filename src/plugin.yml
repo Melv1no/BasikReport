@@ -5,3 +5,4 @@ website: https://github.com/Melv1no/BasikReport
 main: fr.crazzoxx.basikreport.BasikReport
 commands:
   report:
+    description: main command

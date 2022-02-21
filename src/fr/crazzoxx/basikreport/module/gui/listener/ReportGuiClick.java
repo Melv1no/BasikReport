@@ -23,7 +23,7 @@ public class ReportGuiClick implements Listener {
                     for(Player target : instance.getServer().getOnlinePlayers()){
                         if(e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase(target.getDisplayName())){
                             e.getWhoClicked().teleport(target.getLocation());
-                            e.getWhoClicked().sendMessage(instance.getConfStr("message.staff.report-gui-teleport"));
+                            e.getWhoClicked().sendMessage(instance.getConfStr("gui.report-gui-teleport"));
                             e.setCancelled(true);
                             return;
                         }
