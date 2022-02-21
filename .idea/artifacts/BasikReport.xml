@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="BasikReport">
+    <output-path>$PROJECT_DIR$/../../Serveur/1.8.8 PCR/plugins</output-path>
+    <root id="archive" name="BasikReport.jar">
+      <element id="module-output" name="BasikReport" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/config.yml" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/plugin.yml" />
+    </root>
+  </artifact>
+</component>

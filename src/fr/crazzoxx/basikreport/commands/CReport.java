@@ -1,6 +1,8 @@
 package fr.crazzoxx.basikreport.commands;
 
 import fr.crazzoxx.basikreport.BasikReport;
+import fr.crazzoxx.basikreport.module.gui.ReportGui;
+import fr.crazzoxx.basikreport.module.gui.ReportItems;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -27,9 +29,10 @@ public class CReport implements CommandExecutor {
         }else if(args.length == 1){
             switch(args[0]){
                  case "gui":
-                    if(commandSender instanceof Player)
+                    if(commandSender instanceof Player && commandSender.hasPermission("basikreport.admin.gui"))
                        ReportGui(commandSender);
                     else
+                        commandSender.sendMessage(instance.getConfStr("plugin.permission-denied"));
                         commandSender.sendMessage(instance.getConfStr("plugin.no-console"));
                     break;
                 case "list":
@@ -89,5 +92,8 @@ public class CReport implements CommandExecutor {
     }
 
     private void ReportGui(CommandSender commandSender) {
+        Player player = (Player) commandSender;
+        player.openInventory(new ReportGui().getReportGui());
+        player.updateInventory();
     }
 }

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Spigot-1-8-8-PCR">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../Serveur/1.8.8 PCR/Spigot-1-8-8-PCR.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../Serveur/1.8.8 PCR/Spigot-1-8-8-PCR.jar!/" />
+    </SOURCES>
+  </library>
+</component>
