@@ -1,6 +1,7 @@
 name: BasikReport
 author: Crazzoxx
-version: 1.0
+version: 1.0.1
+website: https://github.com/Melv1no/BasikReport
 main: fr.crazzoxx.basikreport.BasikReport
 commands:
   report:
