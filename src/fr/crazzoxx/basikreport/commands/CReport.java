@@ -33,7 +33,6 @@ public class CReport implements CommandExecutor {
                        ReportGui(commandSender);
                     else
                         commandSender.sendMessage(instance.getConfStr("plugin.permission-denied"));
-                        commandSender.sendMessage(instance.getConfStr("plugin.no-console"));
                     break;
                 case "list":
                     if(commandSender.hasPermission("basikreport.admin.list"))

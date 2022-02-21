@@ -31,8 +31,13 @@ public class ReportItems {
             SkullMeta meta = (SkullMeta) Bukkit.getItemFactory().getItemMeta(Material.SKULL_ITEM);
             meta.setOwner(reportedPlayer.getKey().getDisplayName());
             List<String> lore = new ArrayList<String>();
+            String connect = "§coffline";
+            for(Player target : instance.getServer().getOnlinePlayers()){
+                if(target.getDisplayName().equalsIgnoreCase(reportedPlayer.getKey().getDisplayName()))
+                    connect = "§aonline";
+            }
             for (String lores : instance.getConfig().getStringList("gui.items-lores")) {
-                lore.add(lores.replace("{report_count}", reportedPlayer.getValue().toString()));
+                lore.add(lores.replace("{report_count}", reportedPlayer.getValue().toString()).replace("&","§").replace("{connect_status}",connect));
             }
             meta.setLore(lore);
             meta.setDisplayName(reportedPlayer.getKey().getDisplayName());
