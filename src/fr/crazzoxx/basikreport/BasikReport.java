@@ -1,7 +1,10 @@
 package fr.crazzoxx.basikreport;
 
 import fr.crazzoxx.basikreport.commands.CReport;
+import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import java.util.HashMap;
 
 public class BasikReport extends JavaPlugin {
 
@@ -12,18 +15,17 @@ public class BasikReport extends JavaPlugin {
     saveDefaultConfig();
     getCommand("report").setExecutor(new CReport());
     }
-
     @Override
     public void onDisable() {
 
     }
-
-    public static BasikReport getInstance(){
+    public static BasikReport getInstance() {
         return instance;
     }
-
     public String getConfStr(String confPath){
         return this.getConfig().getString(confPath).replace("{prefix}",getConfig().getString("plugin.prefix")).replace("&","§");
     }
+    private HashMap<Player, Integer> reportList = new HashMap<Player, Integer>();
+    public  HashMap<Player,Integer> getReportList(){ return reportList;}
 
 }

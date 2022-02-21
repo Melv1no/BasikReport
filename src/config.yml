@@ -1,6 +1,9 @@
 plugin:
   enable: true
   prefix: ""
+  usage: "/report pseudo reason"
+  no-console: "&cOnly player can use this command !"
+  permission-denied: "You don't have this permission !"
 gui:
   title: "§c GUI BasikReport"
   items-lores:
@@ -8,10 +11,10 @@ gui:
     - "§c player {online_offline}"
 message:
   player:
-    report-confirmed: "{player} is report"
-    report-failed: "failed to report {player}"
+    report-confirmed: " Vous venez de report {player} !"
+    report-failed: "&cLe joueur {player} est introuvable !"
   staff:
     report: "{player_reported} was reported by {player} for {reason}"
-  server:
-    permission-denied: "You don't have this permission"
-    args-helper: "&cusage > /report pseudo reason"
+    report-list-row: "➥ {player} reported {report_counter}"
+    report-list-empty: "Aucun joueur report"
+
